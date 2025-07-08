@@ -16,10 +16,10 @@ export interface OpportunityCardProps {
   applyUrl?: string; // lien externe si besoin
 }
 
-const badgeColors: Record<string, string> = {
-  "منحة": "bg-[#2E8B57]",
-  "بحث": "bg-blue-600",
-  "ابتكار": "bg-red-500",
+const badgeColors: Record<string, { bg: string; border: string }> = {
+  "منحة": { bg: "bg-[#0b787f]/10", border: "border-[#2E8B57]" },
+  "بحث": { bg: "bg-blue-600/10", border: "border-blue-600" },
+  "ابتكار": { bg: "bg-red-500/10", border: "border-red-500" },
 };
 
 export default function OpportunityCard({
@@ -37,14 +37,14 @@ export default function OpportunityCard({
   applyUrl,
 }: OpportunityCardProps) {
   return (
-    <div className="relative bg-white rounded-lg shadow-md p-6 flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5">
+    <div className="relative bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl p-6 flex flex-col h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5">
       {/* Badge catégorie */}
-      <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white font-bold text-xs ${badgeColors[category] || "bg-gray-400"}`}>{category}</span>
+      <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold border ${badgeColors[category]?.bg || "bg-gray-400/10"} ${badgeColors[category]?.border || "border-gray-400"} text-gray-900`}>{category}</span>
       {/* Titre */}
       <h3 className="font-bold text-lg text-gray-900 mb-2 truncate font-arabic" title={title}>{title}</h3>
       {/* Université + pays */}
       <div className="flex items-center text-sm text-gray-600 mb-1 gap-1">
-        <span className="text-[#2E8B57]">
+        <span className="text-[#0b787f]">
           <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C7.03 2 3 6.03 3 11c0 5.25 7.05 10.45 8.09 11.21a1 1 0 0 0 1.18 0C13.95 21.45 21 16.25 21 11c0-4.97-4.03-9-9-9Zm0 17.88C9.14 17.1 5 13.61 5 11a7 7 0 1 1 14 0c0 2.61-4.14 6.1-7 8.88Z"/><circle cx="12" cy="11" r="3" fill="#2E8B57"/></svg>
         </span>
         <span className="truncate font-arabic">{university}، {country}</span>
@@ -74,14 +74,14 @@ export default function OpportunityCard({
             href={applyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center bg-[#2E8B57] hover:bg-[#256d46] text-white font-bold py-2 rounded-lg transition-colors duration-200 font-arabic"
+            className="block w-full text-center bg-[#0b787f] hover:bg-[#256d46] text-white font-bold py-2 rounded-lg transition-colors duration-200 font-arabic"
           >
             التقديم الآن
           </a>
         ) : (
           <Link
             href={`/opportunities/${id}`}
-            className="block w-full text-center bg-[#2E8B57] hover:bg-[#256d46] text-white font-bold py-2 rounded-lg transition-colors duration-200 font-arabic"
+            className="block w-full text-center bg-[#0b787f] hover:bg-[#256d46] text-white font-bold py-2 rounded-lg transition-colors duration-200 font-arabic"
           >
             التقديم الآن
           </Link>

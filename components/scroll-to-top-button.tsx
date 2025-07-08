@@ -51,7 +51,7 @@ export default function ScrollToTopButton() {
             <span className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-gray-300 rounded" />
             {/* Green fill, height = scrollProgress * 100% */}
             <span
-              className="absolute left-1/2 -translate-x-1/2 w-0.5 bg-[#134f4b] rounded transition-all duration-200"
+              className="absolute left-1/2 -translate-x-1/2 w-0.5 bg-[#0b787f] rounded transition-all duration-200"
               style={{ height: `${scrollProgress * 80}px`, bottom: 0 }}
             />
             {/* Spacer for layout */}

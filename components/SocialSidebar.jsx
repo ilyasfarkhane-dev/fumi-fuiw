@@ -9,7 +9,7 @@ const socialLinks = [
 
 const SocialSidebar = () => {
   return (
-    <div className="fixed top-1/2 right-0 -translate-y-1/2 z-50 flex flex-col items-center bg-[#134f4b] rounded-l-xl py-4 px-2 shadow-lg space-y-4 md:space-y-6 md:py-6 md:px-3 md:rounded-l-2xl"
+    <div className="fixed top-1/2 right-0 -translate-y-1/2 z-50 flex flex-col items-center bg-[#0b787f] rounded-l-xl py-4 px-2 shadow-lg space-y-4 md:space-y-6 md:py-6 md:px-3 md:rounded-l-2xl"
       style={{ minHeight: '220px' }}
     >
       {/* Icônes */}

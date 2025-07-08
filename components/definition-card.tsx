@@ -18,8 +18,8 @@ export default function DefinitionCard({ icon, title, description, onClick, isAc
       whileTap={{ scale: 0.97 }}
       aria-pressed={isActive}
     >
-      <span className="mb-4 text-4xl text-[#134f4b]">{icon}</span>
-      <span className="font-bold text-lg mb-2 text-[#134f4b] font-arabic">{title}</span>
+      <span className="mb-4 text-4xl text-[#0b787f]">{icon}</span>
+      <span className="font-bold text-lg mb-2 text-[#0b787f] font-arabic">{title}</span>
       <span className="text-gray-700 text-sm font-arabic line-clamp-3">{description}</span>
     </motion.button>
   )

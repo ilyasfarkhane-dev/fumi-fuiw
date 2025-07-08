@@ -3,12 +3,12 @@
 import Link from "next/link"
 import { Calendar } from "lucide-react"
 
-const categoryColors: Record<string, string> = {
-  "منح دراسية": "bg-red-500",
-  "مؤتمرات": "bg-blue-500",
-  "فرص عمل": "bg-green-500",
-  "برامج": "bg-purple-500",
-  "الكل": "bg-gray-400"
+const categoryColors: Record<string, { bg: string; border: string }> = {
+  "منح دراسية": { bg: "bg-red-500/10", border: "border-red-500" },
+  "مؤتمرات": { bg: "bg-blue-500/10", border: "border-blue-500" },
+  "فرص عمل": { bg: "bg-green-500/10", border: "border-green-500" },
+  "برامج": { bg: "bg-purple-500/10", border: "border-purple-500" },
+  "الكل": { bg: "bg-gray-400/10", border: "border-gray-400" },
 }
 
 interface NewsCardProps {
@@ -32,7 +32,7 @@ export default function NewsCard({ id, title, description, image, category, date
           <span className="text-gray-300 text-4xl">📰</span>
         )}
         {/* Badge catégorie */}
-        <span className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold text-white ${categoryColors[category] || 'bg-gray-400'}`}>{category}</span>
+        <span className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold text-gray-900 border ${categoryColors[category]?.bg || 'bg-gray-400/10'} ${categoryColors[category]?.border || 'border-gray-400'}`}>{category}</span>
         {/* Date de publication */}
         <span className="absolute top-3 left-3 text-xs text-gray-400 font-arabic">{date}</span>
       </div>

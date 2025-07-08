@@ -36,9 +36,13 @@ const legalLinks = [
 
 const CustomFooter = () => {
   return (
-    <footer className="bg-[#1a2233] text-gray-200 pt-12 pb-6 px-4" dir="rtl">
+    <footer className="relative text-gray-200 pt-12 pb-6 px-4 overflow-hidden" dir="rtl">
+      {/* Background image */}
+      <img src="/bg.jpg" alt="background" className="absolute inset-0 w-full h-full object-cover z-0" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#1a2233]/90 z-10" />
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-8"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-8 relative z-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
@@ -139,7 +143,7 @@ const CustomFooter = () => {
       </motion.div>
       {/* Copyright et liens légaux */}
       <motion.div
-        className="border-t border-gray-700 pt-6 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400"
+        className="border-t border-gray-700 pt-6 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400 relative z-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.7 }}

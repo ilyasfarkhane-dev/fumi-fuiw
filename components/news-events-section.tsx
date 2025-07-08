@@ -116,9 +116,9 @@ export default function NewsEventsSection() {
       <div className="max-w-7xl mx-auto">
         {/* En-tête */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-arabic relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0b787f] mb-4 font-arabic relative inline-block">
             آخر الأخبار والفعاليات
-            <span className="block h-1 w-24 bg-[#2E8B57] mx-auto mt-4 rounded-full" />
+            <span className="block h-1 w-24 bg-[#c7b9a7] mx-auto mt-8 rounded-full" />
           </h2>
           <p className="text-lg text-gray-600 font-arabic max-w-3xl mx-auto" dir="rtl">
             كن على اطلاع بآخر التطورات والدروس في العالم الأكاديمي الإسلامي
@@ -132,7 +132,7 @@ export default function NewsEventsSection() {
               key={cat}
               className={`px-5 py-2 rounded-lg font-bold border transition-all duration-200 font-arabic ${
                 selectedCategory === cat
-                  ? 'bg-[#2E8B57] text-white shadow border-[#2E8B57]' 
+                  ? 'bg-[#0b787f] text-white shadow border-[#2E8B57]' 
                   : 'bg-white text-gray-900 border-gray-200 hover:bg-[#e6f4ee]'
               }`}
               onClick={() => handleCategory(cat)}
@@ -163,7 +163,7 @@ export default function NewsEventsSection() {
               <button
                 key={i + 1}
                 onClick={() => handlePage(i + 1)}
-                className={`px-3 py-1 rounded font-arabic text-sm border ${currentPage === i + 1 ? 'bg-[#2E8B57] text-white border-[#2E8B57]' : 'bg-white text-gray-900 border-gray-200'}`}
+                className={`px-3 py-1 rounded font-arabic text-sm border ${currentPage === i + 1 ? 'bg-[#0b787f] text-white border-[#2E8B57]' : 'bg-white text-gray-900 border-gray-200'}`}
               >
                 {i + 1}
               </button>

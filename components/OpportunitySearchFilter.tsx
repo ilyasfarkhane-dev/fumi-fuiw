@@ -30,7 +30,7 @@ export default function OpportunitySearchFilter({
           ))}
         </select>
         {/* Icône filtre */}
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#2E8B57]">
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#0b787f]">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6a1 1 0 0 1 1-1h16a1 1 0 0 1 .8 1.6l-5.6 7.47V19a1 1 0 0 1-1.45.89l-3-1.5A1 1 0 0 1 10 17v-2.93L4.2 7.6A1 1 0 0 1 3 6Z"/></svg>
         </span>
         {/* Flèche */}

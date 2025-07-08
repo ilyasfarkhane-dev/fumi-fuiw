@@ -52,11 +52,11 @@ export default function DefinitionSection() {
         viewport={{ once: true, amount: 0.6 }}
         className="max-w-3xl mx-auto text-center mb-12 space-y-6"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-[#134f4b] mb-2 font-arabic relative inline-block">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0b787f] mb-2 font-arabic relative inline-block">
           اتحاد جامعات العالم الإسلامي
           <span className="block h-1 w-24 bg-[#c7b9a7] mx-auto mt-6 rounded-full" />
         </h2>
-        <h3 className="text-xl md:text-2xl font-bold text-[#134f4b] mb-2 font-arabic">
+        <h3 className="text-xl md:text-2xl font-bold text-[#0b787f] mb-2 font-arabic">
           منظمة دولية رائدة تجمع أكثر من 350 جامعة من 57 دولة حول العالم
         </h3>
         <p className="text-gray-800 text-lg font-arabic leading-relaxed mb-4" dir="rtl">
@@ -103,7 +103,7 @@ export default function DefinitionSection() {
         viewport={{ once: true, amount: 0.3 }}
         className="max-w-4xl mx-auto bg-[#E0F2F1] rounded-xl p-10 mt-12"
       >
-        <h3 className="text-2xl font-bold text-[#0b7880] mb-4 font-arabic text-center" dir="rtl">
+        <h3 className="text-2xl font-bold text-[#0b787f] mb-4 font-arabic text-center" dir="rtl">
           رسالتنا
         </h3>
         <p className="text-gray-800 text-lg font-arabic leading-relaxed text-justify" dir="rtl">

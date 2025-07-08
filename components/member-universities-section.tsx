@@ -128,9 +128,9 @@ export default function MemberUniversitiesSection() {
           viewport={{ once: true, amount: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-arabic relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0b787f] mb-4 font-arabic relative inline-block">
             خريطة الجامعات الأعضاء
-            <span className="block h-1 w-24 bg-[#2E8B57] mx-auto mt-4 rounded-full" />
+            <span className="block h-1 w-24 bg-[#c7b9a7] mx-auto mt-4 rounded-full" />
           </h2>
           <p className="text-lg text-gray-600 font-arabic max-w-3xl mx-auto" dir="rtl">
             التحدي: لأكثر من 350 جامعة عضو في اتحاد جامعات العالم الإسلامي حول العالم

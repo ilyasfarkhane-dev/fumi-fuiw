@@ -24,7 +24,7 @@ export default function TopNavbar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-[#134f4b] text-white py-2 text-sm"
+      className="bg-[#0b787f] text-white py-2 text-sm"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">

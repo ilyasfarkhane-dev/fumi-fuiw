@@ -25,13 +25,14 @@ export default function Home() {
       <main>
         <HeroSection />
         <DefinitionSection />
+        <MembershipBenefits />
         <MemberUniversitiesSection />
         <NewsEventsSection />
         <StudentOpportunitiesSection />
         <SuccessStoriesSection />
        
        
-        <MembershipBenefits />
+       
         <NewsletterSubscribe />
        
       </main>

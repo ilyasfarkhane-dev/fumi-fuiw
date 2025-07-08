@@ -57,10 +57,10 @@ const publications = [
 ];
 
 const stats = [
-  { value: '+50', label: 'ورقة بحثية', icon: <BookOpen className="w-7 h-7 text-[#134f4b]" /> },
-  { value: '180', label: 'بحث علمي', icon: <BarChart2 className="w-7 h-7 text-[#134f4b]" /> },
-  { value: '+2,500', label: 'باحث نشط', icon: <Users className="w-7 h-7 text-[#134f4b]" /> },
-  { value: '+15,000', label: 'ورقة بحثية', icon: <FileText className="w-7 h-7 text-[#134f4b]" /> },
+  { value: '+50', label: 'ورقة بحثية', icon: <BookOpen className="w-7 h-7 text-[#0b787f]" /> },
+  { value: '180', label: 'بحث علمي', icon: <BarChart2 className="w-7 h-7 text-[#0b787f]" /> },
+  { value: '+2,500', label: 'باحث نشط', icon: <Users className="w-7 h-7 text-[#0b787f]" /> },
+  { value: '+15,000', label: 'ورقة بحثية', icon: <FileText className="w-7 h-7 text-[#0b787f]" /> },
 ];
 
 const categories = ['الكل', 'ورقة بحثية', 'تقرير', 'تعليم', 'ذكاء اصطناعي'];
@@ -112,7 +112,7 @@ const KnowledgeCenter = () => {
         <div className="relative w-full md:w-2/3">
           <input
             type="text"
-            className="w-full bg-white border border-gray-200 rounded-lg py-2 pr-10 pl-4 text-gray-700 font-arabic focus:outline-none focus:ring-2 focus:ring-[#134f4b]"
+            className="w-full bg-white border border-gray-200 rounded-lg py-2 pr-10 pl-4 text-gray-700 font-arabic focus:outline-none focus:ring-2 focus:ring-[#0b787f]"
             placeholder="ابحث في قاعدة المعرفة"
             value={search}
             onChange={e => setSearch(e.target.value)}
@@ -123,14 +123,14 @@ const KnowledgeCenter = () => {
           </span>
         </div>
         <button className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-4 py-2 text-gray-700 hover:bg-teal-50 transition-colors">
-          <Filter className="w-5 h-5 text-[#134f4b]" />
+          <Filter className="w-5 h-5 text-[#0b787f]" />
           <span>تصفية</span>
         </button>
         <div className="flex gap-2 flex-wrap justify-center md:justify-start">
           {categories.map(cat => (
             <button
               key={cat}
-              className={`px-4 py-1 rounded-full border text-sm font-arabic transition-all duration-200 ${selectedCategory === cat ? 'bg-[#134f4b] text-white border-[#134f4b]' : 'bg-white text-gray-900 border-gray-200 hover:bg-[#134f4b]/10'}`}
+              className={`px-4 py-1 rounded-full border text-sm font-arabic transition-all duration-200 ${selectedCategory === cat ? 'bg-[#0b787f] text-white border-[#0b787f]' : 'bg-white text-gray-900 border-gray-200 hover:bg-[#0b787f]/10'}`}
               onClick={() => setSelectedCategory(cat)}
             >
               {cat}
@@ -163,7 +163,7 @@ const KnowledgeCenter = () => {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.7, delay: 0.1 * i, ease: "easeOut" }}
               >
-                <div className="w-14 h-14 rounded-full bg-[#134f4b]/10 flex items-center justify-center text-[#134f4b] text-2xl">
+                <div className="w-14 h-14 rounded-full bg-[#0b787f]/10 flex items-center justify-center text-[#0b787f] text-2xl">
                   <User className="w-8 h-8" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -171,7 +171,7 @@ const KnowledgeCenter = () => {
                   <div className="text-sm text-gray-600 truncate">{r.specialty} - {r.university}</div>
                   <div className="text-xs text-gray-400 mt-1">{r.stats}</div>
                 </div>
-                <button className="ml-2 bg-[#134f4b] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#134f4b]/80 transition-colors">تواصل</button>
+                <button className="ml-2 bg-[#0b787f] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#0b787f]/80 transition-colors">تواصل</button>
               </motion.div>
             ))}
           </div>
@@ -220,7 +220,7 @@ const KnowledgeCenter = () => {
                     <div className="text-sm text-gray-600 truncate">{pub.desc}</div>
                     <div className="text-xs text-gray-400 mt-1">{pub.stats}</div>
                   </div>
-                  <button className="ml-2 bg-[#134f4b] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#134f4b]/80 transition-colors flex items-center gap-1">
+                  <button className="ml-2 bg-[#0b787f] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#0b787f]/80 transition-colors flex items-center gap-1">
                     <Download className="w-4 h-4" />
                     تحميل
                   </button>

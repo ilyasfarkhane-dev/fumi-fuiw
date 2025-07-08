@@ -64,7 +64,7 @@ export default function UniversityCard({ university, isSelected, onClick, index 
               {university.specializations.slice(0, 3).map((spec, idx) => (
                 <span
                   key={idx}
-                  className="px-2 py-1 bg-[#2E8B57] text-white text-xs rounded-full font-arabic"
+                  className="px-2 py-1 bg-[#c7b9a7] text-white text-xs rounded-full font-arabic"
                 >
                   {spec}
                 </span>
@@ -88,7 +88,7 @@ export default function UniversityCard({ university, isSelected, onClick, index 
             className={`w-full py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 ${
               isSelected
                 ? 'bg-[#2E8B57] text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-[#2E8B57] hover:text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-[#0b787f] hover:text-white'
             } font-arabic flex items-center justify-center`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

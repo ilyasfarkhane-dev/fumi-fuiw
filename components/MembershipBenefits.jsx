@@ -48,8 +48,12 @@ const MembershipBenefits = () => {
   ];
 
   return (
-    <div className="bg-[#134f4b] py-16 px-4 text-white" dir="rtl">
-      <div className="max-w-6xl mx-auto">
+    <div className="relative py-16 px-4 text-white overflow-hidden" dir="rtl">
+      {/* Background image */}
+      <img src="/bg.jpg" alt="background" className="absolute inset-0 w-full h-full object-cover z-0" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#0b787f]/80 z-10" />
+      <div className="max-w-6xl mx-auto relative z-20">
         {/* Header Section */}
         <motion.div
           className="text-center mb-12"
@@ -59,7 +63,7 @@ const MembershipBenefits = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <motion.h2
-            className="text-4xl font-bold mb-4"
+            className="text-4xl font-bold mb-8 text-[#c7b9a7]"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
@@ -123,7 +127,7 @@ const MembershipBenefits = () => {
           }}
         >
           <motion.h3
-            className="text-3xl font-bold text-center mb-8"
+            className="text-3xl font-bold text-center  mb-8 text-[#c7b9a7]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.7 }}
@@ -162,10 +166,10 @@ const MembershipBenefits = () => {
           viewport={{ once: true, amount: 0.7 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
         >
-          <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors duration-300 flex items-center gap-2">
+          <button className="bg-[#c7b9a7] text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-colors duration-300 flex items-center gap-2">
             تقديم طلب العضوية
           </button>
-          <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300 flex items-center gap-2">
+          <button className="bg-transparent border-2 border-[#c7b9a7] text-[#c7b9a7] px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300 flex items-center gap-2">
             <Lock className="w-5 h-5" />
             دخول البوابة الخاصة
           </button>

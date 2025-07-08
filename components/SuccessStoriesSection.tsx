@@ -29,13 +29,13 @@ export default function SuccessStoriesSection() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-arabic relative inline-block"
+            className="text-3xl md:text-4xl font-bold text-[#0b787f] mb-4 font-arabic relative inline-block"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
           >
             قصص نجاح
-            <span className="block h-1 w-24 bg-[#2E8B57] mx-auto mt-4 rounded-full" />
+            <span className="block h-1 w-24 bg-[#c7b9a7] mx-auto mt-6 rounded-full" />
           </motion.h2>
         </motion.div>
 

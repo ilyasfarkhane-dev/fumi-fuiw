@@ -72,7 +72,7 @@ export default function HamburgerMenu() {
               ease: [0.4, 0, 0.2, 1]
             }}
             className="fixed inset-0 z-50 flex flex-col"
-            style={{ backgroundColor: '#134f4b' }}
+            style={{ backgroundColor: '#0b787f' }}
           >
             {/* Menu Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-600">
@@ -96,15 +96,15 @@ export default function HamburgerMenu() {
             </div>
 
             {/* Search Bar */}
-            <div className="px-8 pt-6 pb-2">
+            <div className="px-8 pt-6 pb-2 mt-12">
               <div className="relative max-w-md mx-auto">
                 <input
                   type="text"
                   placeholder="البحث..."
-                  className="w-full px-6 py-4 rounded-full text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30 transition-all duration-200"
+                  className="w-full px-6 py-4   rounded-full text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/30 transition-all duration-200"
                   dir="rtl"
                 />
-                <button className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#134f4b] hover:bg-[#0e3937] text-white p-3 rounded-full transition-colors duration-200">
+                <button className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#0b787f] hover:bg-[#0e3937] text-white p-3 rounded-full transition-colors duration-200">
                   <Search size={20} />
                 </button>
               </div>
