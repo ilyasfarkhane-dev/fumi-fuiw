@@ -12,7 +12,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "fumi-fuiw"
+  title: "Fashionise - الموقع الرسمي",
+  description: "موقع فاشونيز الرسمي للأخبار والمحتوى",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -22,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${inter.variable} font-sans`}>
         <InteractiveCursor />
         <SocialSidebar />
