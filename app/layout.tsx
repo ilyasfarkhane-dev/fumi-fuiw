@@ -12,9 +12,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Fashionise - الموقع الرسمي",
-  description: "موقع فاشونيز الرسمي للأخبار والمحتوى",
-    generator: 'v0.dev'
+  title: "fumi-fuim"
 }
 
 export default function RootLayout({
