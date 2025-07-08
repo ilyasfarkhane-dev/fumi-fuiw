@@ -52,7 +52,7 @@ export default function DefinitionSection() {
         viewport={{ once: true, amount: 0.6 }}
         className="max-w-3xl mx-auto text-center mb-12 space-y-6"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-[#134f4b] mb-2 font-arabic relative inline-block cursor-hover cursor-fill-134f4b group transition-colors duration-200 group-hover:text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#134f4b] mb-2 font-arabic relative inline-block">
           اتحاد جامعات العالم الإسلامي
           <span className="block h-1 w-24 bg-[#c7b9a7] mx-auto mt-6 rounded-full" />
         </h2>

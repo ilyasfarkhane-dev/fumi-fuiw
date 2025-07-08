@@ -5,14 +5,12 @@ import { useEffect, useRef, useState } from "react"
 const CURSOR_COLOR = "#c7b9a7" // Beige color for all backgrounds
 const CURSOR_BORDER = "rgba(199, 185, 167, 0.6)" // 60% opacity
 const CURSOR_BORDER_HOVER = "rgba(199, 185, 167, 0.8)" // 80% opacity
-const CURSOR_FILL_134F4B = "#134f4b"
 
 export default function InteractiveCursor() {
   const dotRef = useRef<HTMLDivElement>(null)
   const circleRef = useRef<HTMLDivElement>(null)
   const [hovering, setHovering] = useState(false)
   const [clicking, setClicking] = useState(false)
-  const [fillColor, setFillColor] = useState<string>("transparent")
   const mouse = useRef({ x: 0, y: 0 })
 
   // Mouse event listeners
@@ -53,27 +51,19 @@ export default function InteractiveCursor() {
       ) return true
       return false
     }
-    const getFillColor = (el: Element | null) => {
-      if (!el) return "transparent"
-      if (el.classList.contains("cursor-fill-134f4b")) return CURSOR_FILL_134F4B
-      return "transparent"
-    }
     const onMouseOver = (e: MouseEvent) => {
       let el = e.target as Element | null
       while (el && el !== document.body) {
         if (isHoverTarget(el)) {
           setHovering(true)
-          setFillColor(getFillColor(el))
           return
         }
         el = el.parentElement
       }
       setHovering(false)
-      setFillColor("transparent")
     }
     const onMouseOut = (e: MouseEvent) => {
       setHovering(false)
-      setFillColor("transparent")
     }
     document.addEventListener("mouseover", onMouseOver)
     document.addEventListener("mouseout", onMouseOut)
@@ -109,7 +99,7 @@ export default function InteractiveCursor() {
     height: hovering ? 80 : 40,
     borderRadius: "50%",
     border: `2.5px solid ${hovering ? CURSOR_BORDER_HOVER : CURSOR_BORDER}`,
-    background: fillColor,
+    background: "transparent",
     zIndex: 9998,
     pointerEvents: "none",
     transition: `width 300ms cubic-bezier(.4,0,.2,1), height 300ms cubic-bezier(.4,0,.2,1), border-color 300ms${clicking ? ', transform 150ms cubic-bezier(.4,0,.2,1)' : ''}`,
